@@ -1,1 +1,1 @@
-# the-collective
+# The PoC Drag Art Collective
