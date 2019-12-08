@@ -220,7 +220,7 @@ ul {
 }
 
 a {
-  color: #00ced0;
+  color: #ff47f6;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent
 }
@@ -250,7 +250,7 @@ nav,
 blockquote {
   margin: 20px 0;
   padding-left: 1.5rem;
-  border-left: 5px solid #00ced0
+  border-left: 5px solid #ff47f6
 }
 
 i {
@@ -267,6 +267,13 @@ i {
   content: "";
   display: table;
   clear: both
+}
+
+.qt-container {
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 0.75rem;
 }
 
 .row .col,
@@ -1059,7 +1066,7 @@ a {
 .qt-parentcontainer .qt-main .qt-main-contents {
   position: relative;
   z-index: 10;
-  overflow: hiddenn
+  overflow: hidden
 }
 
 .qt-parentcontainer .qt-main .qt-pagebg-in {
@@ -1668,4 +1675,16 @@ li.qt-social-linkicon a i {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1)
+}
+
+.qt-paddedcontent {
+  padding: 1rem;
+}
+
+.qt-paper {
+  background-color: #131617;
+}
+
+.qt-the-content p+p, .qt-the-content p+ul, .qt-the-content p+ol, .qt-the-content p+img, .qt-the-content p+iframe, .qt-the-content ol+p, .qt-the-content ol+ul, .qt-the-content ol+ol, .qt-the-content ol+img, .qt-the-content ol+iframe, .qt-the-content ul+p, .qt-the-content ul+ul, .qt-the-content ul+ol, .qt-the-content ul+img, .qt-the-content ul+iframe, .qt-the-content blockquote+p, .qt-the-content blockquote+ul, .qt-the-content blockquote+ol, .qt-the-content blockquote+img, .qt-the-content blockquote+iframe, .qt-the-content table+p, .qt-the-content table+ul, .qt-the-content table+ol, .qt-the-content table+img, .qt-the-content table+iframe, .qt-the-content dl+p, .qt-the-content dl+ul, .qt-the-content dl+ol, .qt-the-content dl+img, .qt-the-content dl+iframe, .qt-the-content h1+p, .qt-the-content h1+ul, .qt-the-content h1+ol, .qt-the-content h1+img, .qt-the-content h1+iframe, .qt-the-content h2+p, .qt-the-content h2+ul, .qt-the-content h2+ol, .qt-the-content h2+img, .qt-the-content h2+iframe, .qt-the-content h3+p, .qt-the-content h3+ul, .qt-the-content h3+ol, .qt-the-content h3+img, .qt-the-content h3+iframe, .qt-the-content h4+p, .qt-the-content h4+ul, .qt-the-content h4+ol, .qt-the-content h4+img, .qt-the-content h4+iframe, .qt-the-content h5+p, .qt-the-content h5+ul, .qt-the-content h5+ol, .qt-the-content h5+img, .qt-the-content h5+iframe, .qt-the-content h6+p, .qt-the-content h6+ul, .qt-the-content h6+ol, .qt-the-content h6+img, .qt-the-content h6+iframe {
+  margin-top: 1.4em;
 }

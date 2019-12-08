@@ -720,3 +720,16 @@
     top: 70px
   }
 }
+
+media="only screen and (min-width: 1201px)"
+@media only screen and (min-width: 1201px)
+.qt-paddedcontent {
+    padding: 40px;
+}
+
+media="only screen and (min-width: 1201px)"
+@media only screen and (min-width: 1201px)
+.qt-the-content {
+    font-size: 18px;
+    line-height: 1.9em;
+}
