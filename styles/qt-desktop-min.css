@@ -132,74 +132,6 @@
     margin: 0;
     float: left
   }
-  .qt-menubar ul.qt-desktopmenu>li {
-    line-height: 65px;
-    height: 65px;
-    display: inline-block;
-    position: relative;
-    padding: 0;
-    float: none;
-    z-index: 10
-  }
-  .qt-menubar ul.qt-desktopmenu>li.qt-logo-link {
-    float: left;
-    padding-left: 0;
-    padding-right: 0
-  }
-  .qt-menubar ul.qt-desktopmenu>li.qt-logo-link a {
-    font-size: 2.4rem;
-    padding-left: 0;
-    padding-right: 0
-  }
-  .qt-menubar ul.qt-desktopmenu>li.qt-social-linkicon a {
-    padding: 0 0 0 8px
-  }
-  .qt-menubar ul.qt-desktopmenu>li.qt-social-linkicon a i {
-    font-size: 28px;
-    vertical-align: middle;
-    display: inline;
-    margin: 0;
-    padding: 0
-  }
-  .qt-menubar ul.qt-desktopmenu>li>a {
-    line-height: 65px;
-    height: 65px;
-    position: relative;
-    display: block
-  }
-  .qt-menubar ul.qt-desktopmenu>li>a:hover {
-    background: transparent
-  }
-  .qt-menubar ul.qt-desktopmenu>li ul {
-    background: #212121
-  }
-  .qt-menubar ul.qt-desktopmenu>li.qt-menuitem {
-    padding-right: 5px
-  }
-  .qt-menubar ul.qt-desktopmenu>li.qt-menuitem>a {
-    padding: 0 5px 0 1px;
-    margin-left: 1rem
-  }
-  .qt-menubar ul.qt-desktopmenu>li.qt-menuitem>a::after {
-    display: block;
-    width: 5px;
-    height: 5px;
-    background: #000;
-    border: none;
-    position: absolute;
-    right: -3px;
-    top: 34px;
-    z-index: -1;
-    content: " ";
-    -webkit-transition: width 0.2s ease-out;
-    transition: width 0.2s ease-out
-  }
-  .qt-menubar ul.qt-desktopmenu>li.qt-menuitem>a:hover {
-    color: #fff
-  }
-  .qt-menubar ul.qt-desktopmenu>li.qt-menuitem>a:hover::after {
-    width: calc(100% + (8px))
-  }
   .qt-menubar ul.qt-desktopmenu>li.qt-menuitem.wpmenucartli.wpmenucart-display-standard {
     height: 33px
   }
@@ -346,23 +278,9 @@
   .qt-menubar.qt-menubar-center {
     padding-top: 20px
   }
-  .qt-menubar.qt-menubar-center ul.qt-desktopmenu {
-    text-align: center;
-    line-height: 40px;
-    min-height: 40px;
-    margin-left: -1rem;
-    margin-bottom: 8px;
-    padding: 0 26px 5px 26px;
-    box-sizing: content-box
-  }
   .qt-menubar.qt-menubar-center ul.qt-desktopmenu.qt-desktopmenu-scr {
     padding-bottom: 10px;
     padding-top: 10px
-  }
-  .qt-menubar.qt-menubar-center ul.qt-desktopmenu>li,
-  .qt-menubar.qt-menubar-center ul.qt-desktopmenu>li>a {
-    line-height: 40px;
-    height: 40px
   }
   .qt-menubar.qt-menubar-center ul.qt-desktopmenu>li.qt-menuitem:first-child>a {
     margin-left: 0
@@ -464,9 +382,6 @@
   }
   .qt-template-page-visualcomposer .qt-parentcontainer {
     padding-top: 0
-  }
-  .qt-parentcontainer .qt-main {
-    padding: 200px 0 0 0
   }
   .qt-parentcontainer .qt-main.qt-page-visualcomposer {
     padding-top: 0
