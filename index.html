@@ -24,9 +24,7 @@
 
 <body>
   <div id="qtMasterContainter" class="qt-parentcontainer" style="perspective: none; height: auto; overflow-x: auto;">
-    <nav class="qt-menubar qt-menubar-center nav-wrapper hide-on-xl-and-down">
-      <div class="qt-content-primary-dark qt-menubg-color">
-      </div>
+    <nav class="qt-menubar qt-menubar-center nav-wrapper">
       <div class="qt-container-l">
         <ul class="qt-menu-secondary">
           <a href="index.html" class="qt-logo-link qt-fontsize-h3">
@@ -60,7 +58,7 @@
             <div style="min-height: 100vh;">
               <div class="col s12">
                 <div class="wpb_wrapper">
-                  <h4 style="text-align: center; max-width: 600px; margin: 0 auto;" >Read the press on our first fundraiser from December 21st! What is your responsibility when representing your community?</h4>
+                  <h4 style="text-align: center; max-width: 600px; margin: 0 auto 20px;" >Read the press on our first fundraiser from December 21st! What is your responsibility when representing your community?</h4>
                 </div>
                 <div class="qt-short-image aligncenter">
                   <img src="https://sidewalkkilla.com/wp-content/uploads/2019/12/suburbia_fundraiser_sidewalkkilla-1021-1024x682.jpg" width="420px" alt='OPINION: WHAT IS YOUR RESPONSIBILITY WHEN REPRESENTING YOUR COMMUNITY?'> </div>
@@ -102,6 +100,32 @@
                   </span>
                 </h2>
                 <hr class="qt-spacer-s">
+                <ul class="events-list" id="events-upcoming">
+                </ul>
+                <div align="center">
+                  <a target="_blank" href="events.html" class="qt-btn qt-btn-l qt-btn-primary">View All Events
+                    <i class="material-icons">arrow_forward</i>
+                  </a>
+                </div>
+                <script src="scripts/format-google-calendar.min.js"></script>
+                <script>
+                  formatGoogleCalendar.init({
+                    calendarUrl: 'https://www.googleapis.com/calendar/v3/calendars/pocdac@gmail.com/events?key=AIzaSyCbkhWejWpMVXD1floGqph9juJ2dSQpWSE',
+                    past: true,
+                    upcoming: true,
+                    sameDayTimes: true,
+                    pastTopN: 0,
+                    upcomingTopN: 5,
+                    recurringEvents: true,
+                    itemsTagName: 'li',
+                    upcomingSelector: '#events-upcoming',
+                    pastSelector: '#events-past',
+                    upcomingHeading: '<h2>Upcoming events</h2>',
+                    format: ['*date*', '*summary*', ' &mdash; ', '*description*', '*location*'],
+                    timeMin: '2016-06-03T10:00:00-07:00',
+                    timeMax: '2020-06-03T10:00:00-07:00'
+                  });
+                </script>
                 <article class="qt-part-event-inline">
                   <div class="row">
                     <div class="col s12 m2 l1 qt-d">

@@ -54,10 +54,6 @@
   .qt-fontsize-h5 {
     font-size: 16px
   }
-  h4,
-  .qt-fontsize-h4 {
-    font-size: 1.414rem
-  }
   h3,
   h2.widgettitle {
     font-size: 2rem
@@ -110,7 +106,6 @@
   }
   .qt-menubar ul.qt-desktopmenu {
     text-align: right;
-    min-height: 65px;
     line-height: 65px;
     padding: 0 20px;
     z-index: 100;
@@ -131,17 +126,6 @@
   .qt-menubar ul.qt-desktopmenu .qt-logo-text img {
     margin: 0;
     float: left
-  }
-  .qt-menubar ul.qt-desktopmenu>li.qt-menuitem.wpmenucartli.wpmenucart-display-standard {
-    height: 33px
-  }
-  .qt-menubar ul.qt-desktopmenu>li.qt-menuitem.wpmenucartli.wpmenucart-display-standard a {
-    border: 2px solid;
-    border-radius: 20px;
-    line-height: 33px;
-    height: 33px;
-    padding: 0 10px 0 10px;
-    box-sizing: content-box
   }
   .qt-menubar ul.qt-desktopmenu>li.qt-menuitem.wpmenucartli.wpmenucart-display-standard a i {
     line-height: inherit
@@ -366,7 +350,9 @@
   .qt-parentcontainer .qt-menubar {
     position: fixed;
     top: 0;
-    z-index: 301
+    z-index: 301;
+    background-color: rgb(19, 22, 23, .75);
+  }
   }
   .qt-parentcontainer.qt-header-transparent {
     padding-top: 0
