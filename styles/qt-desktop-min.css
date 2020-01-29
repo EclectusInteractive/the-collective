@@ -351,8 +351,6 @@
     position: fixed;
     top: 0;
     z-index: 301;
-    background-color: rgb(19, 22, 23, .75);
-  }
   }
   .qt-parentcontainer.qt-header-transparent {
     padding-top: 0
