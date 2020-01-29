@@ -1359,7 +1359,8 @@ input[type="submit"].qt-btn-ghost.qt-btn-xl {
 .qt-wp-pagination ul.page-numbers li a,
 .qt-wp-pagination ul.page-numbers li>span,
 .qt-item-metas,
-.events-list .date {
+.events-list .date,
+.events-list .location {
   font-size: 13px
 }
 
@@ -1432,7 +1433,7 @@ ul.qt-menu-secondary {
   padding: 1rem 0 0.4rem 0
 }
 
-.qt-item-metas, .events-list .date {
+.qt-item-metas, .events-list .date, .events-list .location {
   width: 100%;
   text-align: left;
   display: table;
