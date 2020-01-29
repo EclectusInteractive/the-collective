@@ -93,12 +93,7 @@
           <div class="qt-vc-row-container" style="width: 100%; max-width: 1170px; margin: 0 auto; padding: 0 0.75rem;">
             <div id="events">
               <div class="col s12">
-                <h2 class="qt-center">
-                  <span class="qt-txtfx qt-txtfx--newyork qt-txtfxstart">Events
-                    <span data-letters="Events"></span>
-                    <span data-letters="Events"></span>
-                  </span>
-                </h2>
+                <hr class="qt-spacer-s">
                 <ul class="events-list" id="events-upcoming">
                 </ul>
                 <div align="center">
@@ -118,6 +113,7 @@
                     recurringEvents: true,
                     itemsTagName: 'li',
                     upcomingSelector: '#events-upcoming',
+                    upcomingHeading: '<h2>Events</h2>',
                     format: ['*date*', '*summary*', ' &mdash; ', '*description*', '*location*'],
                     timeMin: '2016-06-03T10:00:00-07:00',
                     timeMax: '2020-06-03T10:00:00-07:00'
