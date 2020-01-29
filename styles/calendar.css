@@ -4,6 +4,6 @@
  * 
  */
 
-#events-upcoming li {
-  
+#events-upcoming li span {
+  display: block;
 }
