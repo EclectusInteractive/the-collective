@@ -7,3 +7,7 @@
 .events-list li span {
   display: block;
 }
+
+.events-list li .summary {
+  margin: 0;
+}
