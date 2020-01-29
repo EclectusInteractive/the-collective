@@ -110,7 +110,7 @@
                 <script>
                   formatGoogleCalendar.init({
                     calendarUrl: 'https://www.googleapis.com/calendar/v3/calendars/pocdac@gmail.com/events?key=AIzaSyCbkhWejWpMVXD1floGqph9juJ2dSQpWSE',
-                    past: true,
+                    past: false,
                     upcoming: true,
                     sameDayTimes: true,
                     pastTopN: 0,
@@ -118,7 +118,6 @@
                     recurringEvents: true,
                     itemsTagName: 'li',
                     upcomingSelector: '#events-upcoming',
-                    pastSelector: '#events-past',
                     format: ['*date*', '*summary*', ' &mdash; ', '*description*', '*location*'],
                     timeMin: '2016-06-03T10:00:00-07:00',
                     timeMax: '2020-06-03T10:00:00-07:00'
