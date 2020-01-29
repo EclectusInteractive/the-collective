@@ -1400,6 +1400,7 @@ nav.qt-menubar {
   padding: 0;
   display: block;
   border-bottom: 2px solid white;
+  background-color: rgb(19, 22, 23, .75);
 }
 
 nav.qt-menubar ul {
