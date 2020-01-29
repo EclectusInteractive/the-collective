@@ -1186,7 +1186,8 @@ h6,
 .qt-fontsize-h3,
 .qt-fontsize-h4,
 .qt-fontsize-h5,
-.qt-fontsize-h6 {
+.qt-fontsize-h6,
+.events-list .summary {
   line-height: 1.15em;
   margin: 0.9em 0 0.38em 0;
   padding: 0;
@@ -1356,7 +1357,8 @@ input[type="submit"].qt-btn-ghost.qt-btn-xl {
 .qt-btn,
 .qt-wp-pagination ul.page-numbers li a,
 .qt-wp-pagination ul.page-numbers li>span,
-.qt-item-metas {
+.qt-item-metas,
+.events-list .date {
   font-size: 13px
 }
 
@@ -1429,7 +1431,7 @@ ul.qt-menu-secondary {
   padding: 1rem 0 0.4rem 0
 }
 
-.qt-item-metas {
+.qt-item-metas, .events-list .date {
   width: 100%;
   text-align: left;
   display: table;
