@@ -37,7 +37,7 @@
 		*/
 		function printCalendar() {
 			// The "Calendar ID" from your calendar settings page, "Calendar Integration" secion:
-			var calendarId = 'pocdac@gmail.com';
+			var calendarId = 'YOUR_CALENDAR_ID@group.calendar.google.com';
 
 			// 1. Create a project using google's wizzard: https://console.developers.google.com/start/api?id=calendar
 			// 2. Create credentials:
@@ -45,9 +45,9 @@
 			//    b) Create Credentials / API key
 			//    c) Since your key will be called from any of your users' browsers, set "Application restrictions" to "None",
 			//       leave "Website restrictions" blank; you may optionally set "API restrictions" to "Google Calendar API"
-			var apiKey = 'AIzaSyCbkhWejWpMVXD1floGqph9juJ2dSQpWSE';
+			var apiKey = 'YOUR_API_KEY';
 			// You can get a list of time zones from here: http://www.timezoneconverter.com/cgi-bin/zonehelp
-			var userTimeZone = "EST";
+			var userTimeZone = "Europe/Budapest";
 
 			// Initializes the client with the API key and the Translate API.
 			gapi.client.init({
@@ -67,14 +67,14 @@
 				});
 			}).then(function (response) {
 				if (response.result.items) {
-					var calendarRows = ['<table class="pocdac-calendar"><tbody>'];
+					var calendarRows = ['<table class="wellness-calendar"><tbody>'];
 					response.result.items.forEach(function(entry) {
 						var startsAt = moment(entry.start.dateTime).format("L") + ' ' + moment(entry.start.dateTime).format("LT");
 						var endsAt = moment(entry.end.dateTime).format("LT");
 						calendarRows.push(`<tr><td>${startsAt} - ${endsAt}</td><td>${entry.summary}</td></tr>`);
 					});
 					calendarRows.push('</tbody></table>');
-					$('#pocdac-calendar').html(calendarRows.join(""));
+					$('#wellness-calendar').html(calendarRows.join(""));
 				}
 			}, function (reason) {
 				console.log('Error: ' + reason.result.error.message);
@@ -131,58 +131,30 @@
                 </h2>
                 <hr class="qt-spacer-s">
                 <article class="qt-part-event-inline">
-                <div id="pocdac-calendar">asdas</div>
-
-                  <div class="row">
-                    <div class="col s12 m2 l1 qt-d">
-                      <h3>
-                        21
-                        <span class="qt-item-metas">December 2019</span>
-                      </h3>
-                    </div>
-                    <div class="col s12 m7 l9">
-                      <h3>
-                        <a href="#">The PoC Drag Art Collective Holiday Spectacular</a>
-                        <span class="qt-item-metas">
-                          Hartstop / 6PM to 2AM </span>
-                      </h3>
-                      <table>
-                        <tr>
-                          <td style="padding-right: 10px;">
-                            <img src="images/logo-hartstop.jpg" width="100"/>
-                          </td>
-                          <td style="padding-right: 10px;">
-                          </td>
-                          <td>
-                            <p>This fundraiser is a collaborative event with queer venue Hartstop located in Brooklyn. With a line up of
-                      35 artists, the mission to raise money for QTPOCs (<a href="https://www.twocc.us/" target="_blank">Trans Women of Color Collective</a>) through a major showcase. All of our headliners are trans
-                      women! We want to put them in the spotlight!</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td style="padding-right: 10px;">
-                            <img src="images/logo-twocc.jpg" width="200"/>
-                          </td>
-                          <td style="padding-right: 10px;" width="100">
-                            <img src="images/lourdes.jpg" width="100" alt="Dr. Lourdes Ashley Hunter"/>
-                          </td>
-                          <td>
-                            <p>The Trans Women of Color Collective (TWOCC) was created to cultivate economic opportunities and affirming spaces for trans people of color
-                       and our families, to foster kinship, build community, engage in healing and restorative justice through arts, culture, media,
-                       advocacy, and activism.</p>
-                          </td>
-                        </tr>
-                      </table>
-                    </div>
-                    <div class="col s12 m3 l2">
-                      <a target="_blank" href="event.html" class="qt-btn qt-btn-l qt-btn-primary">View Event Details
-                        <i class="material-icons">arrow_forward</i>
-                      </a>
-                      <a target="_blank" href="https://facebook.com/events/1010230499330986/?ti=icl" class="qt-btn qt-btn-l qt-btn-primary">Facebook Event
-                        <i class="material-icons">arrow_forward</i>
-                      </a>
-                    </div>
-                  </div>
+<ul id="events-upcoming">
+    </ul>
+    <ul id="events-past">
+    </ul>
+    <script src="scripts/format-google-calendar.min.js"></script>
+    <script>
+      formatGoogleCalendar.init({
+        calendarUrl: 'https://www.googleapis.com/calendar/v3/calendars/pocdac@gmail.com/events?key=AIzaSyCbkhWejWpMVXD1floGqph9juJ2dSQpWSE',
+        past: true,
+        upcoming: true,
+        sameDayTimes: true,
+        pastTopN: 20,
+        upcomingTopN: 20,
+        recurringEvents: true,
+        itemsTagName: 'li',
+        upcomingSelector: '#events-upcoming',
+        pastSelector: '#events-past',
+        upcomingHeading: '<h2>Upcoming events</h2>',
+        pastHeading: '<h2>Past events</h2>',
+        format: ['*date*', ': ', '*summary*', ' &mdash; ', '*description*', ' in ', '*location*'],
+        timeMin: '2016-06-03T10:00:00-07:00',
+        timeMax: '2020-06-03T10:00:00-07:00'
+      });
+    </script>                  
                 </article>
               </div>
             </div>
